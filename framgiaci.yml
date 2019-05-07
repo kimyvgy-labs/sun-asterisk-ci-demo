@@ -1,0 +1,11 @@
+project_type: php
+
+environments:
+  BUILD_VERSION: $PLUGIN_COMMIT_SHA
+
+build:
+  gerneral:
+    image: alpine:latest
+    prepare:
+      - echo 'Hi there! ^^'
+      - echo $BUILD_VERSION
