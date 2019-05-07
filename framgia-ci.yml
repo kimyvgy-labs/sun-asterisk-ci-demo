@@ -7,5 +7,4 @@ build:
   gerneral:
     image: alpine:latest
     prepare:
-      - echo 'Hi there! ^^'
-      - echo $BUILD_VERSION
+      - echo "Build version: $BUILD_VERSION"
