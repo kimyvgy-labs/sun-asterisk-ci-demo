@@ -1,6 +1,6 @@
 # demo-sun-asterisk-ci
 
-> My splendiferous Nuxt.js project
+> Demo Sun*CI
 
 ## Build Setup
 
