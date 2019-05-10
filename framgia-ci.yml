@@ -9,9 +9,8 @@ build:
     prepare:
       - echo "Build version is $BUILD_VERSION"
       - echo "Hi there! ^^"
-      - echo "export BUILD_VERSION=$BUILD_VERSION" > ci-env
-      - cat ci-env
-      - pwd
+      - echo "export VERSION=$BUILD_VERSION" > ci-env
+      - source ci-env
       - echo $(pwd)
+      - echo $VERSION
       - ls -la
-
