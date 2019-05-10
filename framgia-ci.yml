@@ -14,3 +14,9 @@ build:
       - echo $(pwd)
       - echo $VERSION
       - ls -la
+test:
+  eslint:
+    ignore: true
+    command: eslint --format=checkstyle
+      --output-file=.framgia-ci-reports/eslint.xml
+      resources/assets/js/ --ext .js
