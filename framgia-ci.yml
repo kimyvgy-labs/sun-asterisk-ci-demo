@@ -8,3 +8,10 @@ build:
     image: alpine:latest
     prepare:
       - echo "Build version: $BUILD_VERSION"
+      - echo "Hi there! ^^"
+      - export "export BUILD_VERSION=$BUILD_VERSION" > ci-env
+      - cat ci-env
+      - pwd
+      - echo $(pwd)
+      - ls -la
+
