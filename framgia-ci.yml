@@ -18,16 +18,16 @@ build:
 
       - export BUILD_IMAGE=$IMAGE:$BUILD_TAG
       - export RELEASE_IMAGE=$IMAGE:$RELEASE_CHANNEL
-      - echo $APP_KEY
-      - echo $(echo $APP_KEY | cut -c 1-5)
-      - echo $(echo $APP_KEY | cut -c 6-)
+      - echo $PLUGIN_APP_KEY
+      - echo $(echo $PLUGIN_APP_KEY | cut -c 1-5)
+      - echo $(echo $PLUGIN_APP_KEY | cut -c 6-)
 
       - echo "export STAGE=$STAGE" > ci-env
       - echo "export RELEASE_CHANNEL=$RELEASE_CHANNEL" >> ci-env
       - echo "export BUILD_IMAGE=$BUILD_IMAGE" >> ci-env
       - echo "export RELEASE_IMAGE=$RELEASE_IMAGE" >> ci-env
       - echo "export DEPLOYMENT_SERVER=$DEPLOYMENT_SERVER" >> ci-env
-      - echo "export SHOW_APP_KEY=$APP_KEY"
+      - echo "export SHOW_APP_KEY=$PLUGIN_APP_KEY"
 
 deploy:
   docker-build:
