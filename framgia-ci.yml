@@ -32,6 +32,7 @@ deploy:
       branch: [develop]
     commands:
       - test -f ci-env && tail ci-env
+      - source ci-env
 
       - echo "======= Please check informations:"
       - echo "Current directory - " $(pwd)
