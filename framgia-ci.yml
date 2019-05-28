@@ -19,6 +19,8 @@ build:
       - export BUILD_IMAGE=$IMAGE:$BUILD_TAG
       - export RELEASE_IMAGE=$IMAGE:$RELEASE_CHANNEL
       - echo $APP_KEY
+      - echo $(echo $APP_KEY | cut -c 1-5)
+      - echo $(echo $APP_KEY | cut -c 6-)
 
       - echo "export STAGE=$STAGE" > ci-env
       - echo "export RELEASE_CHANNEL=$RELEASE_CHANNEL" >> ci-env
