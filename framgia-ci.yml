@@ -28,6 +28,8 @@ build:
 deploy:
   docker-build:
     image: docker:dind
+    when:
+      branch: [develop]
     commands:
       - test -f ci-env && tail ci-env
 
